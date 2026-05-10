@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picture Perfect Pressure Wash | Sydney Western Suburbs</title>
+  <meta name="description" content="Professional pressure washing across Sydney's Western, Inner West & South West suburbs. Free quotes. Family owned and operated." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #f0f6fc;
+      --navy-mid: #e8f2fa;
+      --navy-card: #ffffff;
+      --blue: #0288D1;
+      --blue-dark: #0277BD;
+      --blue-light: #29B6F6;
+      --blue-glow: rgba(2,136,209,0.18);
+      --white: #ffffff;
+      --grey-light: #f4f8fc;
+      --grey-text: #5a7080;
+      --text-main: #1a2a38;
+      --text-sub: #4a6070;
+      --border: rgba(2,136,209,0.15);
+      --gold: #F59E0B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===================== NAV ===================== */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(2,136,209,0.12);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    #nav.scrolled {
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 2px 24px rgba(2,136,209,0.1);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .nav-logo .wave-icon { width: 36px; height: 36px; flex-shrink: 0; }
+    .nav-logo img.logo-img { height: 52px; width: auto; flex-shrink: 0; border-radius: 8px; }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .nav-logo-text .line1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text-main);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .nav-logo-text .line2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-sub);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--blue);
+      background: rgba(2,136,209,0.07);
+    }
+    .nav-cta {
+      background: var(--blue) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      padding: 10px 20px !important;
+      border-radius: 50px !important;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--blue-dark) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(2,136,209,0.3) !important;
+    }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-main);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(255,255,255,0.99);
+      backdrop-filter: blur(16px);
+      padding: 16px 24px 24px;
+      border-bottom: 1px solid rgba(2,136,209,0.1);
+      z-index: 999;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-sub);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--blue); }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      background: #e8f4fb;
+      overflow: hidden;
+      padding: 120px 24px 140px;
+      display: flex;
+      align-items: center;
+    }
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      background: url('/hf_20260507_011640_b238fa96-9bf6-4134-9084-470d94838272.png') center center / cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .hero-tint {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(2,119,189,0.55) 0%, rgba(41,182,246,0.35) 100%);
+      pointer-events: none;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .ripple-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      animation: rippleExpand 8s ease-out infinite;
+    }
+    .ripple-ring:nth-child(1) { width: 300px; height: 300px; top: 20%; left: 60%; animation-delay: 0s; }
+    .ripple-ring:nth-child(2) { width: 500px; height: 500px; top: 15%; left: 57%; animation-delay: 1.5s; }
+    .ripple-ring:nth-child(3) { width: 700px; height: 700px; top: 10%; left: 54%; animation-delay: 3s; }
+    .ripple-ring:nth-child(4) { width: 900px; height: 900px; top: 5%; left: 51%; animation-delay: 4.5s; }
+    .ripple-ring:nth-child(5) { width: 200px; height: 200px; bottom: 30%; left: 5%; animation-delay: 2s; }
+    .ripple-ring:nth-child(6) { width: 350px; height: 350px; bottom: 25%; left: 2%; animation-delay: 3.5s; }
+    @keyframes rippleExpand {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { opacity: 0.2; }
+      100% { transform: scale(1.2); opacity: 0; }
+    }
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      animation: glowPulse 6s ease-in-out infinite;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+      bottom: -50px; left: -50px;
+      animation: glowPulse 8s ease-in-out infinite reverse;
+    }
+    @keyframes glowPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    .water-drip {
+      position: absolute;
+      width: 2px;
+      border-radius: 0 0 3px 3px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+      animation: drip linear infinite;
+    }
+    .water-drip:nth-child(7)  { left: 15%; height: 60px; animation-duration: 4s;   animation-delay: 0s;   top: -60px; }
+    .water-drip:nth-child(8)  { left: 35%; height: 40px; animation-duration: 5.5s; animation-delay: 1s;   top: -40px; }
+    .water-drip:nth-child(9)  { left: 55%; height: 80px; animation-duration: 3.5s; animation-delay: 2s;   top: -80px; }
+    .water-drip:nth-child(10) { left: 75%; height: 50px; animation-duration: 6s;   animation-delay: 0.5s; top: -50px; }
+    .water-drip:nth-child(11) { left: 90%; height: 35px; animation-duration: 4.5s; animation-delay: 3s;   top: -35px; }
+    @keyframes drip {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .hero-content h1 {
+      font-size: clamp(52px, 7vw, 88px);
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.0;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+    }
+    .hero-content h1 span { color: #ffffff; }
+    .hero-content .subline {
+      font-size: 18px;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 36px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    }
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .badge-check {
+      width: 16px; height: 16px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 9px;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* HERO FORM CARD */
+    .hero-form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: 0 24px 80px rgba(2,119,189,0.25), 0 0 0 1px rgba(2,136,209,0.12);
+      position: relative;
+      animation: floatCard 5s ease-in-out infinite;
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hero-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), #4fc3f7);
+      border-radius: 20px 20px 0 0;
+    }
+    .form-card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--blue);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .form-card-sub {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 5px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #1f2937;
+      background: #fafafa;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(41,182,246,0.15);
+      background: white;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--blue);
+      color: var(--navy);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      margin-top: 4px;
+    }
+    .btn-submit:hover {
+      background: #4fc3f7;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(41,182,246,0.4);
+    }
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+    .form-msg {
+      display: none;
+      text-align: center;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .form-msg.success { background: #dcfce7; color: #166534; display: block; }
+    .form-msg.error { background: #fee2e2; color: #991b1b; display: block; }
+
+    /* Diagonal dividers */
+    .diag-bottom {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+      padding-bottom: 120px;
+    }
+    .diag-top {
+      clip-path: polygon(0 72px, 100% 0, 100% 100%, 0 100%);
+      padding-top: 112px;
+      margin-top: -60px;
+    }
+    .diag-both {
+      clip-path: polygon(0 72px, 100% 0, 100% calc(100% - 72px), 0 100%);
+      padding-top: 112px;
+      padding-bottom: 132px;
+      margin-top: -60px;
+    }
+
+    /* ===================== SERVICES ===================== */
+    #services {
+      background: #ffffff;
+      padding: 100px 24px 120px;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 56px;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(36px, 5vw, 56px);
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+    .services-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--grey-light);
+      border: 1px solid rgba(2,136,209,0.1);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      box-shadow: inset 0 0 0 2px var(--blue);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .service-card:hover::after { opacity: 1; }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(2,136,209,0.12);
+    }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: rgba(2,136,209,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg {
+      width: 28px; height: 28px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-card h3 {
+      font-size: 22px;
+      color: var(--text-main);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* ===================== BEFORE/AFTER ===================== */
+    #gallery {
+      background: var(--grey-light);
+      padding: 100px 24px 120px;
+    }
+    .gallery-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .ba-slider-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(2,136,209,0.18);
+      box-shadow: 0 8px 32px rgba(2,136,209,0.1);
+    }
+    .ba-slider {
+      position: relative;
+      height: 260px;
+      overflow: hidden;
+      cursor: col-resize;
+      user-select: none;
+    }
+    .ba-before-panel {
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 50%;
+      background: #1c2535 center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .ba-after-panel {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      left: 50%;
+      background: #122840 center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .ba-before-panel img,
+    .ba-after-panel img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+    }
+    .ba-watermark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: 0.1em;
+      opacity: 0.18;
+      pointer-events: none;
+      position: relative;
+      z-index: 1;
+    }
+    .ba-watermark.before { color: #e5e7eb; }
+    .ba-watermark.after  { color: var(--blue); }
+    .ba-label-before {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: rgba(239,68,68,0.9);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .ba-label-after {
+      position: absolute;
+      top: 12px; right: 12px;
+      background: rgba(34,197,94,0.9);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .ba-handle {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--blue);
+      transform: translateX(-50%);
+      z-index: 10;
+      cursor: col-resize;
+    }
+    .ba-handle-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(41,182,246,0.5);
+    }
+    .ba-handle-btn svg {
+      width: 20px; height: 20px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ba-caption {
+      padding: 14px 16px;
+      background: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-sub);
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    /* ===================== WHY CHOOSE US ===================== */
+    #why {
+      background: #ffffff;
+      padding: 100px 24px;
+    }
+    #why .section-eyebrow { color: var(--blue); }
+    #why .section-title  { color: var(--text-main); }
+    #why .section-subtitle { color: var(--text-sub); }
+    .why-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 40px 28px;
+      background: var(--grey-light);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(2,136,209,0.06);
+      border: 1px solid rgba(2,136,209,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(2,136,209,0.14);
+    }
+    .why-icon {
+      width: 64px; height: 64px;
+      background: rgba(2,136,209,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .why-icon svg {
+      width: 30px; height: 30px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .why-card h3 {
+      font-size: 22px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .why-card p { font-size: 15px; color: var(--text-sub); line-height: 1.65; }
+
+    /* ===================== TESTIMONIALS ===================== */
+    #testimonials {
+      background: var(--grey-light);
+      padding: 100px 24px;
+    }
+    .testi-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testi-card {
+      background: #ffffff;
+      border: 1px solid rgba(2,136,209,0.1);
+      border-top: 3px solid var(--blue);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .testi-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(2,136,209,0.12);
+    }
+    .testi-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .testi-stars span { color: var(--gold); font-size: 18px; }
+    .testi-quote {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--text-sub);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .testi-author { font-size: 14px; font-weight: 700; color: var(--text-main); }
+    .testi-location { font-size: 12px; color: var(--blue); margin-top: 2px; }
+
+    /* ===================== CONTACT ===================== */
+    #contact {
+      background: #ffffff;
+      padding: 100px 24px 120px;
+    }
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info-title {
+      font-size: 32px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .contact-tagline {
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .contact-item-icon {
+      width: 42px; height: 42px;
+      background: rgba(2,136,209,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg {
+      width: 20px; height: 20px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ci-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      margin-bottom: 3px;
+    }
+    .ci-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-main);
+      display: block;
+      transition: color 0.2s;
+    }
+    a.ci-value:hover { color: var(--blue); }
+    .ci-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .contact-form-wrap {
+      background: var(--grey-light);
+      border: 1px solid rgba(2,136,209,0.12);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+    }
+    .contact-form-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), #4fc3f7);
+      border-radius: 20px 20px 0 0;
+    }
+    .contact-form-wrap .form-group label { color: var(--text-sub); }
+    .contact-form-wrap .form-group input,
+    .contact-form-wrap .form-group select,
+    .contact-form-wrap .form-group textarea {
+      background: #ffffff;
+      border-color: rgba(2,136,209,0.2);
+      color: var(--text-main);
+    }
+    .contact-form-wrap .form-group select option { background: #ffffff; color: var(--text-main); }
+    .contact-form-wrap .form-group input::placeholder,
+    .contact-form-wrap .form-group textarea::placeholder { color: #aab8c2; }
+    .contact-form-wrap .form-group input:focus,
+    .contact-form-wrap .form-group select:focus,
+    .contact-form-wrap .form-group textarea:focus {
+      border-color: var(--blue);
+      background: rgba(2,136,209,0.03);
+    }
+    .contact-form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .contact-form-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 22px;
+    }
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: #0277BD;
+      border-top: none;
+      padding: 48px 24px 0;
+    }
+    .footer-top {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 32px;
+      padding-bottom: 40px;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .footer-nav a:hover { color: #ffffff; background: rgba(255,255,255,0.12); }
+    .footer-tagline {
+      text-align: right;
+      font-size: 14px;
+      font-style: italic;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 16px 0;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a { color: #b3e5fc; transition: color 0.2s; }
+    .footer-bottom a:hover { color: #ffffff; }
+
+    /* ===================== FADE ANIMATIONS ===================== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.d1 { transition-delay: 0.1s; }
+    .fade-up.d2 { transition-delay: 0.2s; }
+    .fade-up.d3 { transition-delay: 0.3s; }
+    .fade-up.d4 { transition-delay: 0.4s; }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; max-width: 640px; }
+      .hero-form-card { animation: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; text-align: center; }
+      .footer-tagline { text-align: center; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-content h1 { font-size: 52px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 24px 20px; }
+      .contact-form-row { grid-template-columns: 1fr; }
+      #hero { padding: 100px 20px 100px; }
+      .diag-bottom, .diag-top, .diag-both { clip-path: none; margin-top: 0; }
+    }
+    @media (max-width: 480px) {
+      .trust-badges { flex-direction: column; align-items: flex-start; }
+      .footer-bottom { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Picture Perfect Pressure Wash">
+      <img src="/Logo_Main.png" alt="Picture Perfect Pressure Wash" class="logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#why">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" id="mm-services">Services</a>
+  <a href="#gallery"  id="mm-gallery">Gallery</a>
+  <a href="#why"      id="mm-why">About</a>
+  <a href="#contact"  id="mm-contact">Contact</a>
+  <a href="#contact"  id="mm-quote" style="color:var(--blue);font-weight:700;">Get a Free Quote &rarr;</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="diag-bottom">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <div class="ripple-ring"></div>
+    <div class="ripple-ring"></div>
+    <div class="ripple-ring"></div>
+    <div class="ripple-ring"></div>
+    <div class="ripple-ring"></div>
+    <div class="ripple-ring"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="water-drip"></div>
+    <div class="water-drip"></div>
+    <div class="water-drip"></div>
+    <div class="water-drip"></div>
+    <div class="water-drip"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#29B6F6" stroke-width="1.5"><path d="M7 1 C9 3 11 5 11 7 C11 10 9 13 7 13 C5 13 3 10 3 7 C3 5 5 3 7 1Z"/></svg>
+        Sydney's Premier Pressure Washing
+      </div>
+      <h1>We Make It<br /><span>Picture Perfect.</span></h1>
+      <p class="subline">Professional pressure washing across Sydney's Western, Inner West &amp; South West suburbs. Family owned, fully insured, and we treat every home like our own.</p>
+      <div class="trust-badges">
+        <div class="badge"><div class="badge-check">&#10003;</div>Licensed &amp; Insured</div>
+        <div class="badge"><div class="badge-check">&#10003;</div>Family Owned</div>
+        <div class="badge"><div class="badge-check">&#10003;</div>Free Quotes</div>
+        <div class="badge"><div class="badge-check">&#10003;</div>100% Trusted</div>
+      </div>
+    </div>
+
+    <div class="hero-form-card">
+      <div class="form-card-title">Get a Free Quote</div>
+      <div class="form-card-sub">Fast response — usually within the hour</div>
+      <form id="heroForm">
+        <input type="hidden" name="access_key" value="74f6068e-420a-486d-b4a0-91c53f95e3f2" />
+        <input type="hidden" name="subject" value="New Quote Request – Picture Perfect Pressure Wash" />
+        <input type="hidden" name="from_name" value="Picture Perfect Pressure Wash Website" />
+        <div class="form-group">
+          <label for="h-name">Your Name</label>
+          <input type="text" id="h-name" name="name" placeholder="e.g. John Smith" required />
+        </div>
+        <div class="form-group">
+          <label for="h-phone">Phone Number</label>
+          <input type="tel" id="h-phone" name="phone" placeholder="e.g. 0400 123 456" required />
+        </div>
+        <div class="form-group">
+          <label for="h-service">Service Required</label>
+          <select id="h-service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option>Driveway Cleaning</option>
+            <option>Brick Cleaning</option>
+            <option>Roof &amp; Gutter Cleaning</option>
+            <option>Pool Surrounds</option>
+            <option>Driveway Colour Seal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="h-msg">Message (optional)</label>
+          <textarea id="h-msg" name="message" placeholder="Tell us a bit more about your job..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="heroBtn">Request My Free Quote</button>
+        <div class="form-msg" id="heroMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="diag-top">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">What We Clean</h2>
+    <p class="section-subtitle">From driveways to rooftops, we bring the pressure to get it done right the first time.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card fade-up d1">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <path d="M4 22 L14 8 L24 22"/>
+          <line x1="4" y1="22" x2="24" y2="22"/>
+          <line x1="9" y1="22" x2="9" y2="26"/>
+          <line x1="19" y1="22" x2="19" y2="26"/>
+          <line x1="4" y1="26" x2="24" y2="26"/>
+          <line x1="7" y1="17" x2="21" y2="17"/>
+          <line x1="5.5" y1="20" x2="22.5" y2="20"/>
+        </svg>
+      </div>
+      <h3>Driveway &amp; Footpath Cleaning</h3>
+      <p>Blast away years of grime, oil stains, moss and mould. Restore your concrete and pavers to their original glory.</p>
+    </div>
+
+    <div class="service-card fade-up d2">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <rect x="3" y="3" width="9" height="5" rx="1"/>
+          <rect x="16" y="3" width="9" height="5" rx="1"/>
+          <rect x="3" y="11" width="9" height="5" rx="1"/>
+          <rect x="16" y="11" width="9" height="5" rx="1"/>
+          <rect x="3" y="19" width="9" height="5" rx="1"/>
+          <rect x="16" y="19" width="9" height="5" rx="1"/>
+        </svg>
+      </div>
+      <h3>Brick Cleaning</h3>
+      <p>Revive tired brickwork, retaining walls and fences. We remove moss, lichen, staining and efflorescence safely.</p>
+    </div>
+
+    <div class="service-card fade-up d3">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <path d="M4 18 L14 6 L24 18"/>
+          <line x1="2" y1="18" x2="26" y2="18"/>
+          <line x1="8" y1="18" x2="8" y2="23"/>
+          <line x1="20" y1="18" x2="20" y2="23"/>
+          <line x1="8" y1="23" x2="20" y2="23"/>
+          <path d="M10 9 Q14 5.5 18 9"/>
+        </svg>
+      </div>
+      <h3>Roof &amp; Gutter Cleaning</h3>
+      <p>Remove debris, moss and mould from your roof and gutters. Protect your home and extend the life of your roof.</p>
+    </div>
+
+    <div class="service-card fade-up d1">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <path d="M4 16 Q7 12 11 15 Q15 18 19 13 Q23 8 26 12"/>
+          <path d="M4 20 Q7 16 11 19 Q15 22 19 17 Q23 12 26 16"/>
+          <rect x="3" y="23" width="22" height="2.5" rx="1.2"/>
+          <line x1="3" y1="10" x2="3" y2="23"/>
+          <line x1="25" y1="10" x2="25" y2="23"/>
+        </svg>
+      </div>
+      <h3>Pool Surrounds</h3>
+      <p>Make your pool area shine again. We remove algae, slippery buildup and staining from all pool coping and surrounds.</p>
+    </div>
+
+    <div class="service-card fade-up d2">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <rect x="4" y="17" width="20" height="4" rx="2"/>
+          <rect x="9" y="21" width="10" height="5" rx="1"/>
+          <line x1="13" y1="17" x2="13" y2="10"/>
+          <circle cx="13" cy="9" r="2"/>
+          <path d="M11 7 Q9 4.5 11 3 Q13 1.5 15 3 Q17 4.5 15 7"/>
+          <path d="M19 17 L22 11"/>
+          <path d="M22 11 L24 13"/>
+          <path d="M22 11 L24 9"/>
+        </svg>
+      </div>
+      <h3>Driveway Colour Seal</h3>
+      <p>Give your driveway a fresh, vibrant look with professional colour seal coating. Protects and beautifies in one step.</p>
+    </div>
+
+    <div class="service-card fade-up d3">
+      <div class="service-icon">
+        <svg viewBox="0 0 28 28">
+          <circle cx="14" cy="14" r="10"/>
+          <path d="M14 9 L14 14 L18 16"/>
+          <path d="M9 14 Q9 10 14 9"/>
+          <path d="M19 14 Q19 18 14 19"/>
+        </svg>
+      </div>
+      <h3>All Surface Cleaning</h3>
+      <p>Not sure what you need? We handle it all — from residential to commercial, no job is too big or too small. Get in touch for a free quote.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE / AFTER GALLERY -->
+<section id="gallery" class="diag-both">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Results That Speak</div>
+    <h2 class="section-title">The Proof Is In The Clean</h2>
+    <p class="section-subtitle">Real results from real jobs across Sydney. Drag the slider to see the difference.</p>
+  </div>
+  <div class="gallery-grid">
+
+    <div class="ba-slider-wrap fade-up d1">
+      <div class="ba-slider" data-slider>
+        <div class="ba-before-panel"><img src="/before-and-after/before4.jpg" alt="Before cleaning" draggable="false" /></div>
+        <div class="ba-after-panel"><img src="/before-and-after/after4.jpg" alt="After cleaning" draggable="false" /></div>
+        <div class="ba-label-before">Before</div>
+        <div class="ba-label-after">After</div>
+        <div class="ba-handle">
+          <div class="ba-handle-btn">
+            <svg viewBox="0 0 20 20"><path d="M7 4 L3 10 L7 16"/><path d="M13 4 L17 10 L13 16"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="ba-caption">Driveway Colour Seal &mdash; Western Sydney</div>
+    </div>
+
+    <div class="ba-slider-wrap fade-up d2">
+      <div class="ba-slider" data-slider>
+        <div class="ba-before-panel"><img src="/before-and-after/before5.jpg" alt="Before cleaning" draggable="false" /></div>
+        <div class="ba-after-panel"><img src="/before-and-after/after5.jpg" alt="After cleaning" draggable="false" /></div>
+        <div class="ba-label-before">Before</div>
+        <div class="ba-label-after">After</div>
+        <div class="ba-handle">
+          <div class="ba-handle-btn">
+            <svg viewBox="0 0 20 20"><path d="M7 4 L3 10 L7 16"/><path d="M13 4 L17 10 L13 16"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="ba-caption">Brick Cleaning &mdash; South West Sydney</div>
+    </div>
+
+    <div class="ba-slider-wrap fade-up d3">
+      <div class="ba-slider" data-slider>
+        <div class="ba-before-panel"><img src="/before-and-after/before2.jpeg" alt="Before cleaning" draggable="false" /></div>
+        <div class="ba-after-panel"><img src="/before-and-after/after2.jpeg" alt="After cleaning" draggable="false" /></div>
+        <div class="ba-label-before">Before</div>
+        <div class="ba-label-after">After</div>
+        <div class="ba-handle">
+          <div class="ba-handle-btn">
+            <svg viewBox="0 0 20 20"><path d="M7 4 L3 10 L7 16"/><path d="M13 4 L17 10 L13 16"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="ba-caption">Driveway Colour Seal &mdash; Inner West</div>
+    </div>
+
+    <div class="ba-slider-wrap fade-up d4">
+      <div class="ba-slider" data-slider>
+        <div class="ba-before-panel"><img src="/before-and-after/before6.jpg" alt="Before cleaning" draggable="false" /></div>
+        <div class="ba-after-panel"><img src="/before-and-after/after6.jpg" alt="After cleaning" draggable="false" /></div>
+        <div class="ba-label-before">Before</div>
+        <div class="ba-label-after">After</div>
+        <div class="ba-handle">
+          <div class="ba-handle-btn">
+            <svg viewBox="0 0 20 20"><path d="M7 4 L3 10 L7 16"/><path d="M13 4 L17 10 L13 16"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="ba-caption">More results coming soon&hellip;</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="diag-top">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Why Us</div>
+    <h2 class="section-title">Why Sydney Homeowners Choose Us</h2>
+    <p class="section-subtitle">We're not just another tradie. We're a family who takes pride in every single job.</p>
+  </div>
+  <div class="why-grid">
+
+    <div class="why-card fade-up d1">
+      <div class="why-icon">
+        <svg viewBox="0 0 30 30">
+          <path d="M15 4 C15 4 8 8 8 15 C8 20 11 24 15 26 C19 24 22 20 22 15 C22 8 15 4 15 4Z"/>
+          <path d="M9 22 Q15 27 21 22"/>
+          <path d="M12 15 C12 12 15 10 15 10 C15 10 18 12 18 15"/>
+        </svg>
+      </div>
+      <h3>Family Owned &amp; Operated</h3>
+      <p>We treat your home like it&rsquo;s our own &mdash; because that&rsquo;s exactly how we&rsquo;d want it done. No subcontractors. No shortcuts.</p>
+    </div>
+
+    <div class="why-card fade-up d2">
+      <div class="why-icon">
+        <svg viewBox="0 0 30 30">
+          <path d="M15 3 L5 8 V16 C5 22 10 27 15 28 C20 27 25 22 25 16 V8 Z"/>
+          <path d="M10 15 L13 18 L20 11"/>
+        </svg>
+      </div>
+      <h3>Fully Licensed &amp; Insured</h3>
+      <p>Complete peace of mind on every job. No cowboys, no shortcuts. We&rsquo;re fully covered so you never have to worry.</p>
+    </div>
+
+    <div class="why-card fade-up d3">
+      <div class="why-icon">
+        <svg viewBox="0 0 30 30">
+          <circle cx="15" cy="11" r="6"/>
+          <path d="M6 27 C6 21 24 21 24 27"/>
+          <path d="M10 8 Q12 5 15 5 Q18 5 20 8"/>
+        </svg>
+      </div>
+      <h3>Picture Perfect Results</h3>
+      <p>We don&rsquo;t stop until the job looks exactly like the name suggests. Your satisfaction is our standard &mdash; every time.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="diag-both">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Customer Reviews</div>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-subtitle">Don&rsquo;t just take our word for it. Here&rsquo;s what real customers across Sydney have to say.</p>
+  </div>
+  <div class="testi-grid">
+
+    <div class="testi-card fade-up d1">
+      <div class="testi-stars">
+        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+      </div>
+      <p class="testi-quote">"I couldn&rsquo;t believe the difference &mdash; our driveway looked brand new after Manuel and his crew finished. The whole street was asking about it. Highly recommend!"</p>
+      <div class="testi-author">Sarah T.</div>
+      <div class="testi-location">Merrylands</div>
+    </div>
+
+    <div class="testi-card fade-up d2">
+      <div class="testi-stars">
+        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+      </div>
+      <p class="testi-quote">"Fast, professional, and the price was spot on. The brick cleaning turned out better than expected &mdash; the wall looks decades younger. Will definitely use again."</p>
+      <div class="testi-author">Daniel R.</div>
+      <div class="testi-location">Auburn</div>
+    </div>
+
+    <div class="testi-card fade-up d3">
+      <div class="testi-stars">
+        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+      </div>
+      <p class="testi-quote">"Family business vibes &mdash; they genuinely care about doing a good job. My pool surrounds look incredible. Wouldn&rsquo;t use anyone else now."</p>
+      <div class="testi-author">Kate M.</div>
+      <div class="testi-location">Bankstown</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="diag-top">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title">Get Your Free Quote Today</h2>
+    <p class="section-subtitle">Ready for a picture perfect result? Reach out and we&rsquo;ll get back to you fast.</p>
+  </div>
+  <div class="contact-inner">
+
+    <div class="fade-up d1">
+      <h3 class="contact-info-title">Contact Us</h3>
+      <p class="contact-tagline">Call, email, or fill in the form. We&rsquo;re available 7 days and always happy to chat about your job.</p>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 20 20"><path d="M4.5 3 C4.5 3 3 3 3 4.5 C3 13 9 17 13.5 17 C15 17 15 15.5 15 15.5 L15 12.5 L12.5 12 L11.5 13 C11.5 13 9 12 8 11 C7 10 6 7.5 6 7.5 L7 6.5 L6.5 4 Z"/></svg>
+        </div>
+        <div>
+          <div class="ci-label">Phone</div>
+          <a href="tel:0431243626" class="ci-value">0431 243 626</a>
+          <span class="ci-sub">Tap to call &mdash; available 7 days</span>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 7 L10 12 L18 7"/></svg>
+        </div>
+        <div>
+          <div class="ci-label">Email</div>
+          <a href="mailto:pictureperfectpw@outlook.com" class="ci-value">pictureperfectpw@outlook.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 20 20"><path d="M10 2 C7 2 4 5 4 8.5 C4 13 10 18 10 18 C10 18 16 13 16 8.5 C16 5 13 2 10 2Z"/><circle cx="10" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="ci-label">Service Area</div>
+          <span class="ci-value">Sydney Western Suburbs</span>
+          <span class="ci-sub">Inner West &amp; South West</span>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3"/><circle cx="14.5" cy="5.5" r="1" fill="#29B6F6" stroke="none"/></svg>
+        </div>
+        <div>
+          <div class="ci-label">Instagram</div>
+          <a href="https://instagram.com/__pictureperfectpressurewash" target="_blank" rel="noopener" class="ci-value">@__pictureperfectpressurewash</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 20 20"><path d="M6 3 H13 C14 3 17 5 17 8 C17 11 14 13 11 13 H9 V17 H6 Z"/><path d="M9 13 L9 17"/></svg>
+        </div>
+        <div>
+          <div class="ci-label">TikTok</div>
+          <a href="https://tiktok.com/@picture.perfect.pw" target="_blank" rel="noopener" class="ci-value">picture.perfect.pw</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap fade-up d2">
+      <div class="contact-form-title">Send Your Enquiry</div>
+      <div class="contact-form-sub">We&rsquo;ll get back to you as soon as possible.</div>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="74f6068e-420a-486d-b4a0-91c53f95e3f2" />
+        <input type="hidden" name="subject" value="New Enquiry – Picture Perfect Pressure Wash" />
+        <input type="hidden" name="from_name" value="Picture Perfect Pressure Wash Website" />
+        <div class="contact-form-row">
+          <div class="form-group">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Phone</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="0400 000 000" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" name="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="c-service">Service Required</label>
+          <select id="c-service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option>Driveway Cleaning</option>
+            <option>Brick Cleaning</option>
+            <option>Roof &amp; Gutter Cleaning</option>
+            <option>Pool Surrounds</option>
+            <option>Driveway Colour Seal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" name="message" placeholder="Tell us about your job..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="contactBtn">Send My Enquiry</button>
+        <div class="form-msg" id="contactMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <a href="#hero" class="nav-logo">
+      <img src="/LogoWhite.png" alt="Picture Perfect Pressure Wash" class="logo-img" />
+    </a>
+    <nav class="footer-nav">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#why">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-tagline">"Picture perfect results, every time."</div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Picture Perfect Pressure Wash. All rights reserved.</span>
+    <span>Website by <a href="https://itscold.com.au" target="_blank" rel="noopener">Go Polar Creative</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- NAV SCROLL + ACTIVE ---- */
+  var nav = document.getElementById('nav');
+  var sections = Array.from(document.querySelectorAll('section[id]'));
+  var navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    var cur = '';
+    sections.forEach(function (s) {
+      if (window.scrollY >= s.offsetTop - 130) cur = s.id;
+    });
+    navLinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  }, { passive: true });
+
+  /* ---- MOBILE MENU ---- */
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function () {
+    mobileMenu.classList.toggle('open');
+  });
+
+  ['mm-services','mm-gallery','mm-why','mm-contact','mm-quote'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('click', function () { mobileMenu.classList.remove('open'); });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+    }
+  });
+
+  /* ---- WEB3FORMS ---- */
+  function setupForm(formId, btnId, msgId, defaultLabel) {
+    var form = document.getElementById(formId);
+    var btn  = document.getElementById(btnId);
+    var msg  = document.getElementById(msgId);
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = 'Sending\u2026';
+      msg.className = 'form-msg';
+      msg.textContent = '';
+
+      var data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (json) {
+          if (json.success) {
+            msg.textContent = "Thanks! We'll be in touch soon — usually within the hour.";
+            msg.className = 'form-msg success';
+            form.reset();
+          } else {
+            throw new Error(json.message || 'Failed');
+          }
+        })
+        .catch(function () {
+          msg.textContent = 'Something went wrong. Please call us on 0431 243 626 directly.';
+          msg.className = 'form-msg error';
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = defaultLabel;
+        });
+    });
+  }
+
+  setupForm('heroForm',    'heroBtn',    'heroMsg',    'Request My Free Quote');
+  setupForm('contactForm', 'contactBtn', 'contactMsg', 'Send My Enquiry');
+
+  /* ---- BEFORE/AFTER SLIDERS ---- */
+  document.querySelectorAll('[data-slider]').forEach(function (slider) {
+    var beforePanel = slider.querySelector('.ba-before-panel');
+    var afterPanel  = slider.querySelector('.ba-after-panel');
+    var handle      = slider.querySelector('.ba-handle');
+    var dragging    = false;
+
+    function setPos(clientX) {
+      var rect = slider.getBoundingClientRect();
+      var pct  = Math.max(0.03, Math.min(0.97, (clientX - rect.left) / rect.width));
+      var p    = (pct * 100).toFixed(2) + '%';
+      var q    = ((1 - pct) * 100).toFixed(2) + '%';
+      beforePanel.style.width = p;
+      afterPanel.style.left   = p;
+      afterPanel.style.right  = '0';
+      handle.style.left       = p;
+    }
+
+    handle.addEventListener('mousedown', function (e) { dragging = true; e.preventDefault(); });
+    window.addEventListener('mouseup',   function ()  { dragging = false; });
+    window.addEventListener('mousemove', function (e) { if (dragging) setPos(e.clientX); });
+
+    slider.addEventListener('touchstart', function (e) {
+      dragging = true;
+      setPos(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', function () { dragging = false; });
+
+    window.addEventListener('touchmove', function (e) {
+      if (dragging) {
+        e.preventDefault();
+        setPos(e.touches[0].clientX);
+      }
+    }, { passive: false });
+
+    slider.addEventListener('click', function (e) { setPos(e.clientX); });
+  });
+
+  /* ---- INTERSECTION OBSERVER (fade-up) ---- */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
+
+})();
+</script>
+</body>
+</html>
